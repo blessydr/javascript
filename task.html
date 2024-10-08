@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+       <input type="text" id="input" value="">
+        <button id="addButton" onclick="add()">Add </button>
+        <button id="deleteButton" onclick="deleteButton()">Delete </button>
+        <p id="new"></p>
+        <h1 id="hello">happy life</h1>
+        <h3>hiii Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptatibus illum, illo tenetur eum odio provident suscipit amet alias laudantium maxime ipsum, culpa a doloremque at temporibus velit excepturi magni.</h3>
+        <h3>helloooooo    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus rem quaerat, facere dolore quod cumque ipsa unde quibusdam officia adipisci odio, dignissimos ipsum, maiores aperiam commodi minus asperiores! Nesciunt, perspiciatis.</h3>
+        <h3> hlooo   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, officia reprehenderit! Dolore laboriosam veritatis ex rerum? Ad tempora, similique quae voluptates nihil recusandae repudiandae nesciunt modi repellat incidunt harum hic?</h3>
+        <h4 class="now">your bigest goal is enter to kingdom</h4>
+        <h4 class="now">always smile</h4>
+        <h4 class="now">If you hate me shut and go</h4>
+        <p id="have"></p>
+    </div>
+    <script>
+ 
+        const input = document.getElementById('input');
+        const result=document.getElementById("new");
+       function add(){
+        const para=input.value;
+        result.textContent=para;
+       input.value=""
+       }
+       add();
+       function deleteButton(){
+        result.textContent=""
+       }
+      const ele=document.getElementsByTagName("h3")
+      document.getElementById("hello").innerHTML=ele[0].innerHTML;
+      document.getElementsByClassName("now");
+      document.getElementById("have")
+    </script>
+</body>
+</html>

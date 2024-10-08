@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .container{
+            background-color: darksalmon;
+            padding: 10px;
+            height: 600px;
+        }
+        h1{
+            margin: 50px;
+            font-size: 50px;
+            text-align: center;
+            color: rgb(95, 194, 255);
+            text-shadow: 2px 2px 3px black;
+        }
+        .choice{
+         display: flex;
+         justify-content: space-around;
+margin-left: 10px;
+text-align: center;
+padding: 10px;
+        }
+        img{
+            height: 200px;
+          
+        }
+        button{
+            border-radius: 10px;
+            
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        p{
+            margin-top: 60px;
+            text-align: center;
+            font-size: 40px;
+            color: darkorchid;
+            text-shadow: 2px 2px 3px black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Stone Paper Scissor Game</h1>
+    <div class="game">
+    <div class="choice">
+  
+        <div>
+       
+            <button  class="choice" id="rock" onclick="rock()"><img src="rock.png" alt=""></button>
+            <h3>ROCK</h3>
+        </div>
+            <div>   <button  class="choice" id="paper" onclick="paper()"><img src="paper.png" alt=""></button> <h3>PAPER</h3> </div>
+                <div>   <button  class="choice" id="scissors" onclick="scissors()"><img src="scissors.png" alt=""></button> <h3>SCISSORS</h3> </div>
+              </div>  <div class="result">
+                <p id="result">Make You Move</p>
+               
+            </div>
+        </div>
+    </div>
+    <script>
+       
+        function computerChoice() {
+    const choices = ['rock', 'paper', 'scissors'];
+    const randomNumber = Math.floor(Math.random() * 3);
+    return choices[randomNumber];
+}
+
+function rock() {
+    playRound('rock');
+}
+
+function paper() {
+    playRound('paper');
+}
+
+function scissors() {
+    playRound('scissors');
+}
+
+function playRound(userChoice) {
+    const computer = computerChoice();
+    let result = '';
+
+
+    if (userChoice === computer) {
+        result = "It's a tie!";
+      
+    } else if (
+        (userChoice === 'rock' && computer === 'scissors') ||
+        (userChoice === 'paper' && computer === 'rock') ||
+        (userChoice === 'scissors' && computer === 'paper')
+    ) {
+        result = "You win!";
+        
+    } else {
+        result = "You lose!";
+
+    }
+
+    // Display the result on the page
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = ` Computer chose ${computer.toUpperCase()}.${result}`;
+}
+
+
+    </script>
+
+</body>
+</html>

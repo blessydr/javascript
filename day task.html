@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: slategrey;
+            display: flex;
+            justify-content:center ;
+       
+        }
+        .container{
+            margin-top: 100px;
+            background-color: lightsteelblue;
+      width: 400px;
+      box-shadow: 3px 4px 8px black;
+            height: 240px;
+        }
+   #value1{
+       margin-top: 10px;
+       margin: 10px;
+        }
+        input{
+            height: 20px;
+            width: 200px;
+            padding: 10px;
+            font-size: 30px;
+   
+        }
+        button{
+            margin: 10px;
+            height: 30px;
+    
+            width: 73px;
+            border: 1px solid black;
+            border-radius: 7px;
+            background-color: paleturquoise;
+        }
+        button:hover{
+            background-color: goldenrod;
+        }
+     .result{
+        margin-top: 80px;
+        border-radius: 100px;
+        border: 1px solid transparent;
+        height: 30px;
+        text-align: center;
+        color: darkslateblue;
+        width: 200px;
+        padding: 10px;
+     }
+    </style>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div class="container"><center>
+        <h1>Simple Calculater</h1>
+        <div class="box">
+        <input type="text" id="value1"><br>
+        <input type="text" id="value2"><br>
+        <button onclick="addValues()">ADD</button>
+        <button onclick="multivalues()">MULTIPLY</button>
+        <button onclick="divValues()">DIVIDE</button>
+        <button onclick="subValues()">SUB</button>
+    </div>
+        
+        <input type="text" class="result" id="result">
+    </div></center>
+
+    <script>
+        function addValues() {
+            const num1 = parseFloat(document.getElementById("value1").value);
+            const num2 = parseFloat(document.getElementById("value2").value);
+            const sum = num1 + num2;
+            document.getElementById("result").value = "Answer is: " + sum;
+        }
+        function multivalues(){
+            const num1 = parseFloat(document.getElementById("value1").value);
+            const num2 = parseFloat(document.getElementById("value2").value);
+            const sum = num1 * num2;
+            document.getElementById("result").value = "Answer is: " + sum;
+        }
+        function divValues(){
+            const num1 = parseFloat(document.getElementById("value1").value);
+            const num2 = parseFloat(document.getElementById("value2").value);
+            const sum = num1 / num2;
+            document.getElementById("result").value = "Answer is: " + sum;
+        }
+        function subValues(){
+            const num1 = parseFloat(document.getElementById("value1").value);
+            const num2 = parseFloat(document.getElementById("value2").value);
+            const sum = num1 - num2;
+            document.getElementById("result").value = "Answer is: " + sum;
+        }
+    </script>
+</body>
+</html>

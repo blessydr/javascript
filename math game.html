@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: lightskyblue;
+        }
+        .container{
+        
+           
+            background-color: lightpink;
+            width: 90%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+           top: 50%;
+           left: 50%;
+           padding: 5em 3em;
+           border-radius: 0.5em;
+        }
+        .container h2{
+            text-align: center;
+            margin-top: 10px;
+
+        }
+        #ques{
+            font-size: 20px;
+            background-color: #eeedf1;
+  font-size: 2em;
+  font-weight: 600;
+  color: #23234c;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.4em 0 1em 0;
+  padding: 1em 0;
+        }
+        #submit-btn{
+            background-color: darkturquoise;
+            padding: 10px;
+            border-radius: 9px;
+            width: 80px;
+            font-weight: 500;
+            display: block;
+            border:none;
+           margin-left: 300px;
+           margin-top: 30px;
+        }
+        #error{
+            text-align: center;
+            margin-top: 2em;
+            background-color: darkred;
+            color: white;
+            padding: 0.2em 0;
+        }
+        .container input{
+            font-size: 1em;
+  font-weight: 600;
+  width: 2.35em;
+  color: #23234c;
+  text-align: center;
+  padding: 0 0.2em;
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.12em solid #23234c;
+  margin: 0 0.25em;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Fill in the blanks with the correct number.</h2>
+        <p id="ques"></p>
+        <button id="submit-btn">Submit</button>
+        <p id="error">Some Demo Error Message</p>
+    </div>
+    <div class="control">
+        <p id="result"></p>
+        <button id="start">Start Game</button>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>

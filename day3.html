@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+</head>
+<body>
+    <h2>Day 3 Task:Array </h2>
+    <p id="day3"></p>
+<h4>push pop</h4>
+<p id="pop"></p>
+    <script>
+const fruits=['apple','orange','banana','berry','grapes']
+
+fruits.push('straw berry')
+fruits.unshift('mango')
+fruits.pop()
+fruits.shift()
+document.getElementById("day3").innerHTML=fruits;
+
+// document.getElementById("day3").innerHTML=fruits.join("$");
+// fruits.forEach((fruit)=>
+// {
+//     console.log(fruit);
+// })
+
+const bts=['jimin','Rm','teahyung','jin','suga','jhope','jk']
+// document.getElementById("pop").innerHTML=bts;
+bts.push('lisa','jiisho')
+bts.unshift('kim')
+bts.pop()
+bts.shift()
+
+// console.log(bts);
+document.getElementById("pop").innerHTML=bts;
+
+const games=['cricet','kabadi','ludo','chess','volly ball']
+const favgames=games.slice(2,4)
+console.log(favgames);
+console.log(games);
+
+
+// for loop day 4
+// for loop
+for(let i=10;i>=1;i--)
+{
+    console.log("blessy",i);
+}
+// odd numbers
+for(let i=0;i<10;i++)
+{
+    if(i%2!==0)
+  {
+    console.log("odd numbers:",i);
+  }
+}
+// even numbers
+for(let i=0;i<20;i++)
+{
+    if(i%2==0)
+  {
+    console.log("even numbers:",i);
+  }
+}
+
+// for in loop===>object
+const bio={
+    name:'blessy',
+    age:19,
+    course:'cs'
+}
+for(let value in bio)
+{
+   console.log("value:",value); 
+   console.log(value,bio[value]);
+   console.log(bio.course);
+//    console.log(bio.age);
+}
+
+// for in loop using array
+let colors=['red','blue','pink','purple']
+for(let color  in colors)
+{
+console.log(colors[color]);
+console.log(color);
+}
+
+// for of loop
+let veg=['sambar','rasam','boori','curd rice']
+for(let food of veg){
+    console.log(food);
+}
+// while loop
+let i=1;
+while(i<=7)
+{
+    console.log( "number:"+i);
+
+i++;
+}
+// do while loop
+let b=1;
+do{
+    if(b%2==0){
+    console.log(b);
+}b++
+}
+while(b<=10)
+
+
+// number patterns
+const num=(n)=>{
+    for(let i=1;i<=n;i++){
+        let arr=[];
+        for(let j=1;j<=i+0;j++){
+            arr.push(j)
+        }
+        console.log(arr);
+    }
+}
+num(5)
+
+
+let n = 5; // height of pattern
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  // Internal loop
+  for (let j = 1; j <= i; j++) {
+    string += j;
+  }
+  string += "\n";
+}
+console.log(string);
+let no = 5; // height of pattern
+let string1 = "";
+// External loop
+for (let i = 1; i <= no; i++) {
+  // Internal loop
+  for (let j = 1; j <= i; j++) {
+    string1 += i;
+  }
+  string1 += "\n";
+}
+console.log(string1);
+
+
+// TaSk 1 5/7/2024
+
+var insta=prompt("compose your bio");
+var count=insta.length;
+alert("you have written"+count+"characters you have  written"+(10-count)+"character remaining")
+
+
+// dog age
+var dogage=prompt("How old is your dog?")
+var humanage=((dogage-2)*4+19)
+alert("Your dog is:"+humanage+"years old in human age.")
+
+// swapping
+var a=10;
+var c=15;
+var d=a+b;
+console.log(d);
+
+    </script>
+</body>
+</html>

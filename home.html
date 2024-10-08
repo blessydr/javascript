@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="new.js"></script>
+</head>
+<body>
+    <h2>Hello Everyone</h2>
+    <p>calculate the number</p>
+    <p id="result"></p>
+    <h3>adding</h3>
+    <p id="boys" ></p>
+    <p id="demo"></p>
+
+    <h1 id="head">Welcome to javascript</h1>
+    <button type="button" onclick="divide()">Change</button>
+
+
+<h3>enter the value</h3>
+    <h5 id="sum"></h5>
+
+    <h3>happy birthday</h3>
+    <p id="day"></p>
+    <script>
+
+        var a=10;
+        var b=3;
+        var z=a+b;
+        document.getElementById("result").innerHTML=z;
+var x=2;
+var y=4;
+var h=x**y;
+document.getElementById("boys").innerHTML= h ;
+
+function add(a,b)
+{
+    return a-b
+}
+result=add (6,8)
+console.log(result);
+
+
+
+
+function divide()
+{
+document.getElementById("head").innerHTML="GO Away"
+}
+
+
+answer=multi(8,4)
+function multi(a1,a2){
+    return a1/a2;
+}
+
+document.getElementById("sum").innerHTML=answer;
+
+function wish(name='HEY GIRL')
+{
+    document.getElementById("day").innerHTML=(name+"<br>"+'cutiee');
+}
+wish()
+
+function fact(n)
+{
+if(n==1)
+return 1
+return n* fact(n-1)
+}
+console.log(fact(3));
+
+
+    </script>
+</body>
+</html>

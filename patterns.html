@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="right"></h1>
+    <script>
+        let right="Right Angled triangle"
+        console.log(right);
+        let ryt=5;
+        for(let i=1;i<=ryt;i++){
+     console.log( ' '.repeat(ryt-1)+i.toString().repeat(2*i-1)+'\n'); 
+   
+        }
+       let ang='Inverted Right-Angled Triangle';
+       console.log(ang);
+       let gro=5;
+       for (let i=gro;i>=1;i--){
+        console.log(''.repeat(gro-i)+i.toString().repeat(i));
+       }
+
+       let pram="Pyramid Triangle";
+       console.log(pram);
+       let star=5;
+       for(let i=1;i<=star;i++){
+        console.log(' '.repeat(star-i)+'*'.repeat(2*i-1));
+       }
+       let diamond='Diamond Triangle';
+       console.log(diamond);
+let n=5;
+    for(let i=1;i<=n;i++){
+        console.log(' '.repeat(n-i)+'*'.repeat(2*i-1));
+    }
+   
+    for(let j=n;j>=1;j--){
+        console.log(' '.repeat(n-j)+'*'.repeat(2*j-1));
+    }
+    let pas=" Pascal's Triangle";
+    console.log(pas);
+function pascal(num){
+    for(let i=0;i<num;i++){
+       let row=[];
+      let  coef=1;
+        for(let j=0;j<=i;j++){
+          row.push(coef);
+          coef=(coef*(i-j))/(j+1);
+        }
+        console.log(' '.repeat(num-i)+row.join(' '));
+    }
+}
+pascal(5);
+
+let flo=" Floyd's Triangle";
+console.log(flo);
+function floy(rows){
+    let tri=1;
+    for(let i=1;i<=rows;i++){
+        let leo='  ';
+        for(j=1;j<=i;j++){
+         leo+= tri + '  ';
+            tri++;
+        }
+        console.log(leo.trim());
+    }
+}
+floy(5)
+let eql="Equilateral Triangle";
+console.log(eql);
+
+function equal(val){
+    for(let i=1;i<=val;i++){
+        console.log(' '.repeat(val-i)+'@ '.repeat(i).trim());
+    }
+}
+equal(5)
+
+
+    </script>
+</body>
+</html>

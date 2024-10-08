@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h3>welcome to java script </h3>
+<p id="demo"></p>
+
+<h2>this is a heading</h2>
+<h1 id="head">Hello</h1>
+<button type="button" onclick="change()">change</button>
+<p id="number"></p>
+<p id="color"></p>
+   <script>
+let rainy=true;
+let summer=false;
+let weather=rainy&&summer;
+console.log(weather)
+
+let schoolopen=true;
+let schoolnotopen=false;
+let school=schoolopen||schoolnotopen;
+console.log(school)
+
+let happy=true;
+console.log(!happy)
+
+var a=10;
+var b=20;
+c=a+b
+console.log(c)
+
+var a=10;
+a++
+console.log(a)
+
+var a=10;
+a--
+console.log(a)
+
+var a=10;
+b=a++
+console.log(b)
+
+function add(a,b)
+{
+    return a+b
+}
+result=add(5,4)
+document.getElementById("demo").innerHTML=result
+
+function change()
+{
+    document.getElementById("head").innerHTML="Bye"
+}
+var numbers=14;
+if (numbers>10)
+{
+  Values="the number is greater than 10"
+}
+else{
+    Values="the number is less than 10"
+}
+document.getElementById("number").innerHTML=Values;
+
+function find(a,b)
+{
+    return a+b
+}
+console.log(find (4,7))
+console.log(typeof find (4,7))
+console.log(find);
+
+function great(name='uma'){
+    console.log('hi',name)
+}
+great()
+
+// push and pop an array
+ const colors=['red','blue','green']
+ colors.push('pink')
+ colors.unshift('black')
+ colors.shift()
+ colors.pop()
+ document.getElementById("color").innerHTML=colors;
+
+// for loop 
+ for(let i=1; i<=5; i++)
+ {
+    console.log("number#",i);
+ }
+
+//  for in loop
+const person={
+name:'uma',
+age:'19',
+sex:'female',
+}
+for(let key in person){
+    console.log("key:",key);
+    console.log(key+":",person[key]);
+}
+
+// slice an array
+const flowers=['rose','jasmine','lilly',]
+console.log(flowers);
+const flower=flowers.slice(0,1)
+console.log(flower);
+
+// splice an array
+const cartoon=['dorabujji','chinchan','jackychan','spiderman',]
+const anime=cartoon.splice(0,3,'bheem')
+console.log(anime);
+console.log(cartoon)
+   </script> 
+</body>
+</html>

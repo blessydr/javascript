@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background: url(img/bg2.jpg) no-repeat ;
+         background-size: cover;
+       
+    
+        }
+        .container{
+       
+            background: url(img/beg3.jpg) ;
+            height: 300px;
+            width: 350px;
+         
+        }
+        .container label{
+            padding-left: 30px;
+           font-size: 30px;
+           font-family: 'Times New Roman', Times, serif;
+        }
+        .container{
+            margin-top: 18%;
+            box-shadow: 10px 9px 17px black;
+            margin-left: 76%;
+            border-radius: 10px;
+        }
+        .box{
+       
+            padding-top: 50px;
+            padding-left: 45px;
+        }
+        input{
+            height: 35px;
+            width: 250px;
+        }
+        input:focus{
+            background-color: wheat;
+        }
+        button{
+            font-size: 20px;
+            font-style: italic;
+            margin-top: 20px;
+            margin-left: 30px;
+            height: 40px;
+            background-color: hotpink;
+            border: 1px solid transparent;
+            border-radius: 7px;
+            box-shadow: 3px 2px 3px 2px black;
+            width: 150px;
+        }
+        button:hover{
+            background-color: deepskyblue;
+            font-weight: 900;
+        }
+        button:focus{
+            background-color: greenyellow;
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+       <label for="enter-amount">Enter Amount</label> 
+       <input type="text" id="enter-amount"><br>
+       <button id="button" onclick="enter()">Submit</button>
+    </div>
+</div>
+<div class="image">
+       <div style="display: none;" id="result">
+        <img id="bike1"  src="img/bike1-removebg-preview (1).png" alt="">
+    </div>
+    <div  style="display: none;" id="result2">
+        <img src="img/images__1_-removebg-preview.png" alt="" id="bike2">
+    </div>
+    <div  style="display: none;" id="result3">
+        <img src="img/bike2-removebg-preview.png" alt="" id="bike3">
+    </div>
+</div>
+    <script>
+function enter() {
+    const amount = document.getElementById("enter-amount").value;
+
+    if (amount > 3000) {
+        document.getElementById("result2").style.display = 'block';
+        document.getElementById("result3").style.display = 'none';
+        document.getElementById("result").style.display = 'none';
+    } else if (amount > 2000) {
+        document.getElementById("result3").style.display = 'block';
+        document.getElementById("result2").style.display = 'none';
+        document.getElementById("result").style.display = 'none';
+    } else if (amount > 1500) {
+        document.getElementById("result").style.display = 'block';
+        document.getElementById("result2").style.display = 'none';
+        document.getElementById("result3").style.display = 'none';
+    } else {
+        document.getElementById("result").style.display = 'none';
+        document.getElementById("result2").style.display = 'none';
+        document.getElementById("result3").style.display = 'none';
+    }
+}
+
+    </script>
+</body>
+</html>

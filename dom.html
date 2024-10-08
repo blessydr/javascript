@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       
+        header{
+            background-color: hotpink;
+            display: flex;justify-content: center;
+            margin: 20px;
+            padding: 10px;
+            font-size: 23px;
+        }
+      
+        main{
+            display: flex;
+            justify-content: center;
+        }
+        input
+        {
+           border: 1px solid black;
+            width: 300px;
+            height: 20px;
+            padding: 4px;
+        }
+        input:focus{
+            background-color: silver;
+        }
+        button{
+            height: 28px;
+            background-color: lightskyblue;
+           margin-left: 20px;
+            width: 100px;
+border: 1px solid transparent;
+box-shadow: 2px 1.2px 4px black;
+        }
+        button:hover{
+          background-color: palegreen;
+       
+        }
+        button:focus{
+            background-color: red;
+        }
+        p{
+font-size: 25px;
+display: flex;
+justify-content: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="con"></div>
+    <header><b>Cooking foods</b></header>
+    <main>
+        <!-- <div><h1 id="head">DOM javascript</h1>
+        <p>learn in the w3schools</p></div> -->
+        <input type="text" id="input" placeholder="like to eat....." value="">
+        <button id="button" onclick="show()">Save</button>
+       <button id="handler">change</button>
+       <h4 id="text">how are you?</h4>
+    </main>
+    <p id="result">
+
+    </p>
+    <div>
+        <h2 id="head">What is yours name?</h2>
+        <h3 id="h3"><a href="calculater.html" id="link">link</a></h3>
+        <img src="download.png" alt="" id="img">
+        <button id="btn" onclick="alert('hello everyone!!!')">try it</button>
+    </div>
+    <div>
+        <input type="text" id="box">
+        <h3 id="word"></h3>
+    </div>
+    <div>
+        <h3 id="hlo"></h3>
+    </div>
+    <script>
+        // let heading=document.getElementById("head")
+        // heading.innerText="we are learn javascript"
+        // console.log(heading.innerText);
+        let input=document.getElementById("input")
+        let result=document.getElementById("result")
+function show(){
+ let put=input.value;
+ result.textContent=put
+ result.style.backgroundColor= 'pink';
+ result.style.width= '200px';
+ result.style.marginLeft= '500px';
+ result.style.boxShadow= '2px 3px 6px black';
+}
+show();
+let head=document.getElementById("head");
+head.textContent="my name is blessy";
+head.style.color="green"
+head.innerHTML="<strong>Blessy</strong>"
+let h3=document.getElementById("link");
+
+h3.setAttribute('href','stonepaper.html');
+let pic=document.getElementById("img");
+pic.src="paper.png"
+let mouse=document.getElementById("btn").addEventListener('mouseout',news);
+function news(){
+    head.style.backgroundColor="yellow"
+}
+const hand=document.getElementById("handler");
+const text=document.getElementById("text")
+hand.addEventListener('click',()=>{
+alert("hello!!")
+text.textContent="Yeah..Fine!!"
+});
+// hand.removeEventListener('click',()=>{});
+document.addEventListener("keydown",event=>{
+    console.log('keydown',event);
+})
+
+let box=document.getElementById("box")
+let word=document.getElementById("word")
+box.addEventListener('keyup',(event)=>{
+    if(event.key==='enter'){
+        event.stopPropagation();
+    }
+word.textContent=`| key value: ${event.key}`
+});
+const newdiv=document.getElementById('div');
+newdiv.textContent="lucky girl";
+const con=document.getElementById("con");
+con.appendChild(newdiv)
+
+    </script>
+</body>
+</html>

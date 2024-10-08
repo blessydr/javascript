@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: lightgoldenrodyellow;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+           margin-top: 40px;
+        }
+        .box{
+            background-image: linear-gradient(rgb(236, 171, 171),rgb(254, 218, 152));
+            width: 380px;
+         border-radius: 10px;
+           padding: 20px;
+         font-size: 23px;
+         box-shadow: 10px 10px 20px darkgray,10px 10px 16px rgb(141, 131, 241);
+        }
+        form{
+            margin-left: 70px;
+
+        }
+        input[type='text'],[type='email'],[type='number'],[type='password']{
+            height: 20px;width: 200px;
+        }
+        button{
+            margin: 20px;
+            margin-left: 80px;
+            width: 100px;
+            background-color: transparent;
+            box-shadow: 2px 3px 5px black;
+            height: 30px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+       button:focus{
+        background-color: springgreen;
+       }
+    
+       input:valid{
+        border: 1px solid green;
+       }
+     input:invalid{
+border:1px solid red;
+     }
+       
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2 style="text-align: center;">Data Form</h2>
+            <form id="myform" action="">
+                <label for="user">User Name:</label><br>
+                <input type="text" id="user" required ><br><br>
+                <label for="pwt">Password:</label><br>
+                <input type="password" id="pwt"  required><br><br>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name"  required><br><br>
+            <label for="age">Age:</label><br>
+            <input type="text" id="age"  required><br><br>
+            <label for="gender">Gender:</label><br>
+            <input type="radio" name="gender" >Female
+            <input type="radio" name="gender">Male<br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email"  pattern = /^(\w+[\w.-]*\w+)@([\w-]+(?:\.[\w-]+)+)$/ required><br><br>
+            <label for="phone">Phone:</label><br>
+            <input type="number" id="phone"  required><br><br>
+            <label for="address">Address</label><br>
+            <input type="text" id="address"  required><br>
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+    </div>
+    <script>
+        function vali(){
+var user=document.getElementById("user").value.trim();
+var password=document.getElementById("pwt").value.trim();
+var name=document.getElementById("name").value.trim();
+var age=document.getElementById("age").value.trim();
+var gender = document.querySelector('input[name="gender"]:checked');
+var email =document.getElementById("email").value.trim();
+var phone=document.getElementById("phone").value.trim();
+var address=document.getElementById("address").value.trim();
+
+ if(user===''){
+    alert(" Username must be filled out. ")
+    return false
+ }
+ if(password.length<6){
+    alert("Password must be at least 8 characters long")
+    return false
+ }
+ if(name===''){
+    alert("Name must be filled out")
+    return false
+ }
+ if(isNaN(age) ||age<1||age>120){
+    alert("age must be a number between 1 and 120")
+    return false
+ }
+ if(email===''){
+    alert("email must be filled out")
+    return false
+ }
+ if (!gender) {
+        alert('Gender must be selected');
+        return false;
+    }
+ if(phone===''||phone.length !==10){
+    alert("phone number must be 10 digit numbers")
+    return false
+ }
+ if(address===''){
+    alert("Name must be filled out")
+    return false
+ }
+ return true
+}
+document.getElementById("myform").addEventListener('submit',function(event){
+    if (!vali()){
+        event/preventDefault();
+    }
+});
+    </script>
+</body>
+</html>

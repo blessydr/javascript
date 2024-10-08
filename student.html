@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+     body{
+text-align: center;
+font-size: 30px;
+background-color: antiquewhite;
+     }
+     .box{
+        margin-left: 40%;
+        background-color: thistle;
+        width: 370px;
+        padding: 20px;
+        box-shadow: 5px 3px 9px black;
+     }
+     input{
+        width: 270px;
+        height: 30px;
+     }
+     input:focus{
+        background-color: lightblue;
+        font-size: 24px;
+     }
+     button{
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 120px;
+        font-size: 23px;
+        background-color: skyblue;
+        height: 40px;
+     }
+     button:focus{
+        background-color: mediumspringgreen;
+        box-shadow: 2px 2px 6px black;
+     }
+     button:hover{
+        background-color: lightsalmon;
+     }
+   
+    .attendance-table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .attendance-table th, .attendance-table  td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .attendance-table th {
+        background-color: #f2f2f2;
+    }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+        <h1>Student Attendance</h1>
+        <label for="studid">Student Id</label>
+        <input type="text" id="studid" class="stud" placeholder="Enter your id"><br><br>
+        <label for="name">Student Name</label>
+        <input type="text" id="name" class="stud" placeholder="Enter your name"><br><br>
+       
+        <button onclick="present()">Present</button>
+        <button onclick="absent()">Absent</button>
+    </div>
+        <table id="result">
+           
+        </table>
+        
+        <p id="mark"></p>
+    </div>
+    <script>
+        let attendanceRecords = [];
+        let tableCreated = false; // Flag to track if table header is already created
+     
+         var stdid = document.getElementById("studid").value;
+        var name = document.getElementById("name").value;
+    
+
+
+
+        function present() {
+            let stdid = document.getElementById("studid").value;
+            let name = document.getElementById("name").value;
+    
+            let attendanceRecord = {
+                studentId: stdid,
+                studentName: name,
+                attendance: 'Present'
+            };
+    
+            attendanceRecords.push(attendanceRecord);
+    
+            displayAttendance(attendanceRecord);
+        }
+    
+        function absent() {
+           let stdid = document.getElementById("studid").value;
+            let name = document.getElementById("name").value;
+    
+            let attendanceRecord = {
+                studentId: stdid,
+                studentName: name,
+                attendance: 'Absent'
+            };
+    
+            attendanceRecords.push(attendanceRecord);
+    
+            displayAttendance(attendanceRecord);
+        }
+    
+        function displayAttendance(record) {
+            // Check if table header is already created
+            if (!tableCreated) {
+                createTableHeader();
+                tableCreated = true; // Set flag to true once table header is created
+            }
+    
+            let table = document.createElement('table');
+            table.classList.add('attendance-table');
+           table.style.backgroundColor='skyblue'
+            let row = table.insertRow();
+            let cell1 = row.insertCell();
+            let cell2 = row.insertCell();
+            let cell3 = row.insertCell();
+            cell1.textContent = record.studentId;
+            cell2.textContent = record.studentName;
+            cell3.textContent = record.attendance;
+    
+            document.getElementById("result").appendChild(table);
+        }
+    
+        function createTableHeader() {
+            let table = document.createElement('table');
+            table.classList.add('attendance-table');
+    
+            let headerRow = table.insertRow();
+            let headerCell1 = headerRow.insertCell();
+            let headerCell2 = headerRow.insertCell();
+            let headerCell3 = headerRow.insertCell();
+            headerCell1.textContent = 'Student Id';
+            headerCell2.textContent = 'Student Name';
+            headerCell3.textContent = 'Attendance';
+    document.getElementById("result").appendChild(table);
+        }
+    </script>
+    
+
+</body>
+</html>

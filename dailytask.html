@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>click me</h3>
+    <button type="button" onclick="btn()">click
+   </button><br>
+   <p id="strr"></p>
+<p id="str"></p>
+<p id="str1"></p>
+<p id="str2"></p>
+<p id="str3"></p>
+<p id="str4"></p>
+<p id="str5"></p>
+<h1 id="demo"></h1>
+    <script>
+        // syntax
+        // variables var,let,const
+        // var
+        var b=10;
+        var v=11;
+        var c=b+v*3;
+        document.write(c+"<br>")
+        // let
+
+        let k=2;
+        let p=5;
+        let n=k+10*p;
+   document.write(k+"<br>")
+//    const
+const u=5;
+
+const j=9;
+
+var age = 30;
+let name = "John";
+const PI = 3.14159;
+document.write(age+"<br>"+name+"<br>"+PI+"<br>")
+
+
+// function
+function btn()
+{
+    alert("Hello everyone!!!")
+}
+// if and else
+let point=12;
+if(point%2==0)
+{
+    console.log("this number is even");
+}
+else{
+    console.log("this number is odd");
+}
+// operators
+let rainy=true;
+let summer=false;
+let weather=rainy&&summer;
+console.log(weather)
+
+let schoolopen=true;
+let schoolnotopen=false;
+let school=schoolopen||schoolnotopen;
+console.log(school)
+
+let happy=true;
+console.log(!happy)
+
+var a=10;
+var b=20;
+c=a+b
+console.log(c)
+
+var a=10;
+a++
+console.log(a)
+
+var a=10;
+a--
+console.log(a)
+
+var a=10;
+b=a++
+console.log(b)
+
+function add(a,b)
+{
+    return a+b
+}
+result=add(5,4)
+document.getElementById("demo").innerHTML=result
+
+function change()
+{
+    document.getElementById("head").innerHTML="Bye"
+}
+//strings
+var myname="blessy"
+document.getElementById("strr").innerHTML=myname.charAt(1);
+console.log(myname.charAt(2));
+document.getElementById("str").innerHTML=myname.toLocaleUpperCase();
+document.getElementById("str1").innerHTML=myname.toLocaleLowerCase();
+document.getElementById("str2").innerHTML=myname.slice(2,5);
+document.getElementById("str3").innerHTML=myname.split("e");
+document.getElementById("str4").innerHTML=myname.split("");
+document.getElementById("str5").innerHTML=myname.substring(1,5);
+console.log(myname.indexOf("es"));
+console.log(myname.lastIndexOf("ss"));
+console.log(myname.includes("d"));
+// concat
+var m="happy"
+var o="life"
+var w=m+" "+o;
+console.log(w);
+
+// numbers
+const mynum="75";
+console.log(mynum);
+console.log(Number(mynum)); //string value change to number
+// boolean values
+console.log(Number(true));
+console.log(Number(false));
+// isinteger
+console.log(Number.isInteger(33));  //true
+console.log(Number.isInteger(3.146756));  //false
+// parseInt
+console.log(Number.parseInt(7.92356));  //float value change integer
+// parseFloat
+var float="38.5555akdsl"
+console.log(Number.parseFloat(float)); //not show alphapets
+console.log(Number.parseFloat(float).toFixed(2)); //38.56 
+console.log(Number.isNaN("bles"));  //false 
+console.log(isNaN("bles")); //true
+;
+// Math properties
+console.log("pi:"+Math.PI);
+// trunc
+var bun=35.745343276;
+console.log(Math.trunc(bun));
+// round
+console.log(Math.round(bun));
+// ceil
+console.log(Math.ceil(bun));
+// floor
+console.log(Math.floor(42.44442));
+// math.pow
+console.log(Math.pow(2,7));
+// math.min
+console.log(Math.min(3,6,7,9,2,3));
+// math.max
+console.log(Math.max(4,9,7,4,5));
+// random
+console.log(Math.random());
+console.log(Math.floor(Math.random()*10+1));
+// example
+var now="blessy"
+console.log(now.charAt(Math.floor(Math.random()*now.length)));
+// TODAY TASK 
+var MYname="Blessy"
+for( let i=MYname.length;i >=0;i--)
+{
+    console.log(MYname[i]);
+}
+// switch
+let day;
+switch(new Date().getDay()){
+    case 0:
+        day="sunday";
+        break;
+        case 1:
+        day="Monday";
+        break;
+        case 2:
+        day="tuesday";
+        break;
+        case 3:
+        day="wednesday";
+        break;
+        case 4:
+        day="thursday";
+        break;
+        case 5:
+        day="friday";
+        break;
+        case 6:
+        day="saturday";
+        break;
+        default:
+            day="looking forward to the weekend";
+        
+}
+document.getElementById("demo").textContent="Today is "+day;
+
+// Regular Expression
+var s1="kpop girls is the cute in the world lorem scfj ayfuf";
+var s2=/O/igm;
+console.log(s1.search(s2));
+console.log(s1.match(s2));
+// brackts
+var do0="we are work in the laptop";
+var sd=/a/g;
+console.log(do0.match(sd));
+
+// REG EXP
+//test
+const ex=/hello/i;
+console.log(ex.test("HELLO girl"));    //true
+// exec()
+const  su=/(\d+)/;
+const resultt=su.exec("there are 113 apples")
+console.log(resultt);
+// match()
+const strr="police 100";
+const matchs=strr.match(/\d+/);
+console.log(matchs);
+// replace()
+const replace=strr.replace(/\d+/,"call")
+console.log(replace); 
+// split()
+const fruit="apple,orange,banana,berry";
+const split=fruit.split(/,orange/);
+console.log(split);
+// global
+const str = "one one one of the world in the ";
+const regex = /th/g;
+console.log(str.match(regex)); // ["one", "one", "one"]
+// insensitive
+const str23 = "Hello World";
+const regexx = /hello/i;
+console.log(regexx.test(str23)); // true
+// multi line
+const st = "Hello\nWorld";
+const rege = /Hello/m;
+console.log(rege.test(st)); // true
+// email
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+console.log(emailRegex.test("blessy2453@gmail.com")); // true
+
+// phone
+const phone=/^\d{3}-\d{3}-\d{4}$/;
+console.log(phone.test("638-526-3673"));
+// dates
+const dateRegex = /(?:\d{2}[-/])?\d{2}[-/]\d{4}/;
+console.log(dateRegex.test("12/31/2024")); // true
+console.log(dateRegex.test("31-12-2024")); // true
+
+
+// SET()
+const mySet = new Set();
+const anotherSet = new Set(["hello","guys","we","are","playing","game"]);
+console.log(anotherSet);
+anotherSet.add("today")  //add
+anotherSet.delete("today")   //delete
+console.log( anotherSet.has("hello"));  //has
+console.log(anotherSet.size);     //size
+
+
+// map()
+const don=[1,2,3,4,5,6,7]
+let fine=don.map(function(val){
+    return val*2;
+});
+console.log(fine);
+
+
+const people=[
+    {id:1,fname:"Blessy",lname:"dharmaraj"},
+    {id:2,fname:"lessy",lname:"dr"},
+    {id:3,fname:"les",lname:"r"}
+];
+ let din= people.map(function(val){
+return[ val.fname , val.lname].join("   ");  // fname call 
+});
+console.log(din);
+
+const dog=[
+    {size:"big",name:"ayra",laname:"das"},
+    {size:"small",name:"dano" ,laname:"shi"},
+    {size:"mediam",name:"leo",laname:"dass"},
+    {size:"small",name:"ruban",laname:"sri"}
+];
+let cat=dog.map(function(val){
+    let cdname=[val.name,val.size].join("  ");
+    let obj={size:val,cdname};
+    return obj;
+});
+console.log(cat);
+//map
+const map2=new Map();
+map2.set('b',1);
+map2.set('l',2);
+map2.set('e',3);
+map2.set('s',4);
+map2.set('s',5);
+map2.set('y',6);
+console.log(map2.get('b'));
+console.log(map2.size);
+map2.delete('y')
+console.log(map2.size);
+console.log(map2);
+
+
+// number patterns
+let patt=6;      //pramid number
+for(let i=1;i<=patt;i++){
+    console.log(' '.repeat(patt-i)+i.toString().repeat(2*i-1));
+}  
+
+// *patterns
+let star=5;
+for(let i=1;i<=star;i++){
+   console.log(' '.repeat(star-i)+'*'.repeat(2*i-1)+'\n');
+}
+// number pattern
+let row=5;
+let mon=1;
+for(let i=1;i<=row;i++){
+ let rows='';
+ for(let j=1;j<=i;j++){
+    rows+=mon+' ';
+    mon++;
+ }
+  console.log(rows);
+}
+// reverse
+let h=5;
+let string='';
+for(let i=1;i<=h;i++){
+    for (let j=1;j<=h-i+1;j++){
+    
+        string+=h-j+1.;
+    }
+    string+="\n";
+}
+console.log(string);
+    
+// objects
+const car={type:"car",name:"AUDI car",year:2013};
+console.log("this the "+car.name);
+const person={name:"blessy",age:19,eyecolor:"brown",gender:"girl",file:function(){
+    return this.name+" "+this.age;
+}};
+person.name='jeesho';
+console.log(person.name+" "+"is"+person.age+"years old"+ person.gender);
+console.log(person.file());
+  
+const mem=new Object();
+mem.fname="dharma";
+mem.lname="raj";
+mem.age=65;
+
+console.log("this is"+' '+mem.age+' '+"years old");
+
+const guys={
+    name:"sasuke",
+    age:19,
+    pos:"ninja"
+};
+let text=" ";
+for(let c in guys){
+    text+=guys[c]+" ";
+}
+console.log(text);
+  
+function kpop(first,last,age){
+this.fname=first;
+this.lname=last;
+this.age=age;
+}
+const raper=new kpop("kim","taehyung",27);
+const singer=new kpop("jeon","jungkook",24)
+console.log(" the bts singer"+" "+raper.fname+raper.lname+"."+" "+singer.lname+" "+
+    "age is"+" "+singer.age
+);
+// Object
+const system={
+    name:"phone",
+    price:129000,
+    model:"Iphone15 Pro",
+    delli(){
+        let don=`This is the ${system.model} mobile.`; 
+    }
+}
+console.log(system.delli());
+system.delli();
+// another way 
+let mobile= new Object();
+mobile.name="VIVO 21",
+mobile.price=140000,
+mobile.ram="12 GB RAM"
+console.log(mobile['ram']);
+// oops
+const human={
+    name:"blessy",
+    age:19,
+    hobby:['creating,cooking,craft'],
+    isAlive:true,
+address:{
+    city:"Tirunelveli",
+    state:"tamil nadu"
+},
+ wish:function(){
+    // let msg="my name is "+human.name+"  i intrest in "+human.hobby;
+    let msg=`my name is ${this.name}, i love my city ${this.address.city}.`
+    console.log(msg);
+}
+
+};
+human.wish();
+
+
+
+            </script>
+</body>
+</html>

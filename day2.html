@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>day enjoy</h2>
+    <p id="today"></p>
+
+    <h1> if else 1st task</h1>
+    <p id="number"></p>
+    <script>
+        
+let point=12;
+if(point%2==0)
+{
+    console.log("this number is even");
+}
+else{
+    console.log("this number is odd");
+}
+
+if(new Date().getHours()<10)
+{
+    console.log("good mornging");
+}
+else{
+    console.log("good evening");
+}
+
+
+const time= new Date(). getHours();
+let greetings;
+if(time<7){
+    greetings="good morning"
+}
+else{
+    greetings="good evening"
+}
+document.getElementById("today").innerHTML=greetings;
+
+
+var number1=18;
+if(number1>10){
+    values="the number is greater than 10"
+}
+else{
+    values="the number is less than 10."
+}
+document.getElementById("number").innerHTML=values;
+
+var a=4;
+if(4>5 && 5<10){
+   result="yes"
+}
+else{
+   result="no"
+}
+console.log(result);
+    </script>
+</body>
+</html>
